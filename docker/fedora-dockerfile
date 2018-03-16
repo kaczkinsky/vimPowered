@@ -1,0 +1,8 @@
+FROM fedora:latest
+RUN mkdir -p /opt/test
+WORKDIR /opt/test
+COPY . .
+RUN yum update && \
+yum install -y curl wget squashfs-tools gcc make vim
+CMD ["bash"] 
+#["./init.sh"]

@@ -1,0 +1,1 @@
+faire l'ajout des lignes via printf dans le vimrc (/etc/vimrc)

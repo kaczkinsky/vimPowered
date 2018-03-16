@@ -1,0 +1,8 @@
+FROM alpine:latest
+RUN mkdir -p /opt/test
+WORKDIR /opt/test
+COPY . .
+RUN apk update && \
+apk add --no-cache wget curl squashfs-tools gcc make vim
+CMD ["sh"] 
+ #["./init.sh"]

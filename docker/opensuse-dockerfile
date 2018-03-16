@@ -1,0 +1,8 @@
+FROM opensuse:latest
+RUN mkdir -p /opt/test
+WORKDIR /opt/test
+COPY . .
+RUN zypper --non-interactive update && \
+zypper --non-interactive install curl wget gcc make vim
+CMD ["bash"] 
+ #["./init.sh"]

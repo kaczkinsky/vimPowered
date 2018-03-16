@@ -1,0 +1,8 @@
+FROM ubuntu:latest
+RUN mkdir -p /opt/test
+WORKDIR /opt/test
+COPY . .
+RUN apt-get update && \
+apt-get install -y curl wget squashfs-tools gcc make vim
+CMD ["bash"] 
+ #["./init.sh"]

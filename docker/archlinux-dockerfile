@@ -1,0 +1,8 @@
+FROM base/archlinux
+RUN mkdir -p /opt/test
+WORKDIR /opt/test
+COPY . .
+RUN pacman -Sy && \
+pacman --noconfirm -S wget curl squashfs-tools gcc make vim
+CMD ["bash"] 
+ #["./init.sh"]

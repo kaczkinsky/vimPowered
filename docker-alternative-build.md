@@ -1,0 +1,1 @@
+docker build - < fedora-dockerfile
